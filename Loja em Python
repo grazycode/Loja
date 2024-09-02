@@ -1,0 +1,36 @@
+print('Bem-vindo a Loja da Grazyella') 
+ 
+# [EXIGÊNCIA DE CÓDIGO 2 de 6] 
+valorUnitario = float(input('Entre com o valor do produto: ')) 
+quantidade = int(input('Entre com a quantidade do produto: ')) 
+ 
+valorSemDes = quantidade * valorUnitario 
+# abreviação para valor sem desconto 
+ 
+ 
+# [EXIGÊNCIA DE CÓDIGO 3 de 6] 
+# [EXIGÊNCIA DE CÓDIGO 4 de 6] 
+# [EXIGÊNCIA DE CÓDIGO 5 de 6] 
+if valorSemDes < 2500: 
+    desconto = 0 
+    print(f'Valor total da compra: R${valorSemDes:.2f}') 
+elif valorSemDes >= 2500 and valorSemDes < 6000: 
+    desconto = 0.04 
+    # estrutura simplificada para facilitar na conta: 4% de desconto/100=0.04 
+    valorComDes = valorSemDes - (valorSemDes * desconto) 
+    porcentagem = 4 
+    print(f'O valor total SEM desconto: R${valorSemDes:.2f}') 
+    print(f'O valor total COM desconto de {porcentagem}%: R${valorComDes:.2f}') 
+#                                           ↑para mostrar na saída a porcentagem de desconto 
+elif valorSemDes >= 6000 and valorSemDes < 10000: 
+    desconto = 0.07 
+    valorComDes = valorSemDes - (valorSemDes * desconto) 
+    porcentagem = 7 
+    print(f'O valor total SEM desconto: R${valorSemDes:.2f}') 
+    print(f'O valor total COM desconto de {porcentagem}%: R${valorComDes:.2f}') 
+elif valorSemDes >= 10000: 
+    desconto = 0.11 
+    valorComDes = valorSemDes - (valorSemDes * desconto) 
+    porcentagem = 11 
+    print(f'O valor total SEM desconto: R${valorSemDes:.2f}') 
+    print(f'O valor total COM desconto de {porcentagem}%: R${valorComDes:.2f}') 
